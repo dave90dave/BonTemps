@@ -64,7 +64,7 @@ namespace BonTemps.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
-            [Required, Display(Name = "Woonplaats")]
+            [Required, Display(Name = "Adres")]
             public string Address { get; set; }
 
             [Required, Display(Name = "Postcode")]

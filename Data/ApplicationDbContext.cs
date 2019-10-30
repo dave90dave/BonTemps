@@ -78,5 +78,7 @@ namespace BonTemps.Data
         public DbSet<BonTemps.Models.Reservation> Reservation { get; set; }
 
         public DbSet<BonTemps.Models.Category> Category { get; set; }
+
+        public DbSet<BonTemps.Models.Allergen> Allergen { get; set; }
     }
 }
