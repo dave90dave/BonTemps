@@ -12,6 +12,7 @@ namespace BonTemps.Models
         public decimal Price { get; set; }
         public string ImagePath { get; set; }
         public ICollection<DishMenu> DishMenus { get; set; }
+        public int CategoryRef { get; set; }
         public Category Category { get; set; }
         public ICollection<AllergenDish> AllergenDishes { get; set; }
     }

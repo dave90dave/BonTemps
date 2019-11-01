@@ -54,10 +54,10 @@ namespace BonTemps.Data
                 .WithMany(m => m.DishMenus)
                 .HasForeignKey(dm => dm.MenuId);
 
-            builder.Entity<Dish>()
-                .HasOne(d => d.Category)
-                .WithOne(c => c.Dish)
-                .HasForeignKey<Category>(c => c.DishRef);
+            builder.Entity<Category>()
+                .HasOne(c => c.Dish)
+                .WithOne(d => d.Category)
+                .HasForeignKey<Dish>(d => d.CategoryRef);
 
             builder.Entity<AllergenDish>()
                 .HasKey(ad => new { ad.AllergenId, ad.DishId });
@@ -80,5 +80,7 @@ namespace BonTemps.Data
         public DbSet<BonTemps.Models.Category> Category { get; set; }
 
         public DbSet<BonTemps.Models.Allergen> Allergen { get; set; }
+
+        public DbSet<BonTemps.Models.Table> Table { get; set; }
     }
 }
